@@ -82,10 +82,7 @@ void setup()
   pinMode(prevLinePin, INPUT_PULLUP);
   pinMode(LED_BUILTIN, OUTPUT);
   initTimer();
-  //attachInterrupt(digitalPinToInterrupt(nextLinePin), ISRNextLine, RISING);
-  //attachInterrupt(digitalPinToInterrupt(prevLinePin), ISRPrevLine, RISING);
   clearBraille();
-  delay(2000);
   charIndexAtLineStart[line] = charIndex;
 }
 
@@ -109,7 +106,6 @@ void loop() {
     else
     {
       line = 0;
-      //getSerialData();
     }
   }
 
